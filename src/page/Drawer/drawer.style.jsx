@@ -6,4 +6,5 @@ text-decoration: none;
 color: rgba(0, 0, 0, 0.87);
 font-size:1.25rem;
 margin-left: 80vw;
+
 `

@@ -15,11 +15,14 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
-import Day1 from '../../days/Day1/day1.components'
+import CheckIcon from '@material-ui/icons/Check';
+
 import { Switch, Route } from 'react-router-dom'
 import { DrawerLink } from './drawer.style'
+
+import Day1 from '../../days/Day1/day1.components'
+import Day2 from '../../days/Day2/day2.components'
+import Checkout from '../../components/CardCheckOut/cardcheckout.components'
 
 const drawerWidth = 240;
 
@@ -134,10 +137,10 @@ export default function PersistentDrawerLeft() {
                 </div>
                 <Divider />
                 <List>
-                    {['Day1'].map((text, index) => (
-                        <DrawerLink to={`/day${index + 1}`} key={index}>
+                    {['Day1','Day2'].map((text, index) => (
+                        <DrawerLink to={`/day${index + 1}`} key={index} style={{margin:0}}>
                             <ListItem button key={text}>
-                                <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+                                <ListItemIcon><CheckIcon /></ListItemIcon>
                                 <ListItemText primary={text} />
                             </ListItem>
                         </DrawerLink>
@@ -152,6 +155,8 @@ export default function PersistentDrawerLeft() {
                 <div className={classes.drawerHeader} />
                 <Switch>
                     <Route path='/day1' component={Day1}></Route>
+                    <Route exact path='/day2' component={Day2}></Route>
+                    <Route path='/day2/checkout' component={Checkout}></Route>
                 </Switch>
             </main>
         </div>
