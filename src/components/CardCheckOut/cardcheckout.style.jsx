@@ -92,3 +92,19 @@ font-size: 15px;
 }
 
 `
+
+export const SubmitBtn = styled.button`
+margin: auto;
+margin-top: 20px;
+padding: 10px;
+text-align: center;
+font-family: 'Balsamiq Sans', cursive;
+width: 50%;
+display: block;
+background-color: black;
+color: white;
+border-radius: 10px;
+font-size: 15px;
+outline: none;
+border: none;
+`

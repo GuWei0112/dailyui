@@ -8,8 +8,6 @@ import {
 } from './day2.style'
 
 export default ({ history }) => {
-
-
     const handleGoToCheckout = () => {
         history.push('/day2/checkout')
     }

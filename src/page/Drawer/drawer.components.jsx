@@ -23,6 +23,7 @@ import { DrawerLink } from './drawer.style'
 import Day1 from '../../days/Day1/day1.components'
 import Day2 from '../../days/Day2/day2.components'
 import Checkout from '../../components/CardCheckOut/cardcheckout.components'
+import CheckoutSuccess from '../../components/CheckOutSuccess/checkoutsuccess.components'
 
 const drawerWidth = 240;
 
@@ -157,6 +158,7 @@ export default function PersistentDrawerLeft() {
                     <Route path='/day1' component={Day1}></Route>
                     <Route exact path='/day2' component={Day2}></Route>
                     <Route path='/day2/checkout' component={Checkout}></Route>
+                    <Route path='/day2/success' component={CheckoutSuccess}></Route>
                 </Switch>
             </main>
         </div>
