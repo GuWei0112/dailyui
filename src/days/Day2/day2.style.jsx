@@ -14,7 +14,6 @@ export const FormWrapper = styled.div`
 padding: 10px;
 margin: auto;
 width: 80%;
---background-color: #ffaa01;
 display: flex;
 flex-direction: column;
 `
