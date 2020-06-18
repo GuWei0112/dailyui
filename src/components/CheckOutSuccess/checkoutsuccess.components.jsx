@@ -11,7 +11,6 @@ export default () => {
             <FormWrapper>
                 <div style={{height: '100px'}}>
                 <FormTitle>Success!</FormTitle>
-
                 </div>
                 <FormMessage>Your bill has been successed!</FormMessage>
             </FormWrapper>
