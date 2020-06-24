@@ -24,6 +24,7 @@ import Day1 from '../../days/Day1/day1.components'
 import Day2 from '../../days/Day2/day2.components'
 import Checkout from '../../components/CardCheckOut/cardcheckout.components'
 import CheckoutSuccess from '../../components/CheckOutSuccess/checkoutsuccess.components'
+import Day3 from '../../days/Day3/day3.components.tsx'
 
 const drawerWidth = 240;
 
@@ -138,7 +139,7 @@ export default function PersistentDrawerLeft() {
                 </div>
                 <Divider />
                 <List>
-                    {['Day1','Day2'].map((text, index) => (
+                    {['Day1','Day2','Day3'].map((text, index) => (
                         <DrawerLink to={`/day${index + 1}`} key={index} style={{margin:0}}>
                             <ListItem button key={text}>
                                 <ListItemIcon><CheckIcon /></ListItemIcon>
@@ -159,6 +160,7 @@ export default function PersistentDrawerLeft() {
                     <Route exact path='/day2' component={Day2}></Route>
                     <Route path='/day2/checkout' component={Checkout}></Route>
                     <Route path='/day2/success' component={CheckoutSuccess}></Route>
+                    <Route path='/day3' component={Day3}></Route>
                 </Switch>
             </main>
         </div>
