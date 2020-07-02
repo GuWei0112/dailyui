@@ -1,3 +1,4 @@
+import styled from 'styled-components'
 
 export const SpinMachineLeft = styled.div`
 position:absolute;
@@ -72,10 +73,22 @@ top: 72.5vh;
 left: 53vw;
 border-radius: 100px;
 background-color: #3f51b5;
-&:hover {
+
+&:active {
     transition: 2s ease-in-out;
     transform: rotate(180deg);
 }
+`
+
+export const SpinMachineResetButton = styled.div`
+position: absolute;
+width: 30px;
+height: 30px;
+top: 65vh;
+left: 60vw;
+border-radius: 100px;
+background-color: white;
+z-index: 20;
 `
 
 export const SpinMachineBottomBase = styled.div`
